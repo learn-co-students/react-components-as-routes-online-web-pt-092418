@@ -10,9 +10,20 @@ const Home = () => {
   );
 };
 
+const About = () => {
+  return (
+    <div>
+      <h1>This is my about component!</h1>
+    </div>
+  );
+};
+
 ReactDOM.render((
   <Router>
-    <Route path= "/" render={Home} />
+    <React.Fragment>
+      <Route path= "/" render={Home} />
+      <Route exact path="/about" render={About} />
+    </React.Fragment>
   </Router>
 ),
   document.getElementById('root')
